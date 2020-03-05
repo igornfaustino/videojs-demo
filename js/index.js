@@ -27,3 +27,10 @@ const handlePlayPause = () => {
     pause();
   }
 };
+
+const updateTimeDisplay = () => {
+  document.getElementById("time_video1").innerHTML = video_master.currentTime();
+  document.getElementById("time_video2").innerHTML = video_slave.currentTime();
+};
+
+setInterval(updateTimeDisplay, 100);
